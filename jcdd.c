@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
-#include<unistd.h>
+//#include<unistd.h>
 #include<time.h>
 #include<string.h>
 #include<sys/types.h>
-#include<sys/syscall.h>
+//#include<sys/syscall.h>
 /*本次实验模拟实现操作系统中进程调度算法,模拟进程在不同时刻到达的情况*/
 #define PNUM  5 //进程的数量
 #define TIMER 10 //定时器,最长CPU区间时间
@@ -473,10 +473,10 @@ int main()
      InitialJob();
      DisplayPCB(job->next);
       //  RR(SLICE);
-      // FCFS();
+       FCFS();
    //   SJF();
    //   SRTF();
-      NonPriority();
+    //  NonPriority();
    //   Priority();      
      DisplayGantt();
      DisplayTime();
